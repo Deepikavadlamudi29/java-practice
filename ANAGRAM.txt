@@ -1,0 +1,35 @@
+\\\\\\\\\\\\\\\\\\\\ANAGRAM
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+        String str1=sc.nextLine();
+        String str2=sc.nextLine();
+        int n1=str1.length();
+        int n2=str2.length();
+        if(n1!=n2){
+            System.out.println("False");
+        }
+
+        char[] charArray1 = str1.toCharArray();
+        char[] charArray2 = str2.toCharArray();
+        Arrays.sort(charArray1);
+        Arrays.sort(charArray2);
+        for(int i=0;i<n1;i++){
+            if(charArray1[i]!=charArray2[i]){
+                System.out.println("False");
+                return;
+            }}
+            
+        System.out.println("True");
+                            
+        
+	}
+}

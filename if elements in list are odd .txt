@@ -1,0 +1,26 @@
+if elements in list are odd 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        List<Integer> inputList = new ArrayList<>();
+        System.out.println("Enter elements for the list (enter '010' to finish):");
+        int input;
+        while (scanner.hasNextInt()) {
+            int num = scanner.nextInt();
+            inputList.add(num);
+        }
+        scanner.close();
+        for(int i:inputList){
+            if(i%2==0){
+                System.out.println("no");
+            }
+            else{
+                System.out.println("yes");
+            }
+        }
+    }
+}

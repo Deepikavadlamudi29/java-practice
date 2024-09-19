@@ -1,0 +1,23 @@
+VOWEL IN STRING
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String input=sc.nextLine();
+        System.out.println(vowelfound(input));
+        
+    }
+        
+    public static boolean vowelfound(String input){
+        input = input.toLowerCase();
+
+        String vowel="aeiou";
+        for(char ch:input.toCharArray()){
+            if(vowel.indexOf(ch)!=-1){
+                return true;
+            }
+        }
+        return false;
+    }
+}
